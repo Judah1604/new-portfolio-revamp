@@ -1,0 +1,120 @@
+@media screen and (max-width: 768px) {
+	.top-section {
+
+		.navbar {
+			.nav {
+				flex-direction: row;
+			}
+		}
+
+		.hero-section h1 {
+			font-size: 4em;
+		}
+	}
+
+	.skills .languages {
+		width: 100%;
+	}
+
+	.about {
+
+		.about-content {
+			flex-direction: column;
+			margin: 0;
+			margin-bottom: 2em;
+
+			.about-img {
+				width: 450px;
+				margin-bottom: 1.5em;
+			}
+
+			.about-text {
+				width: 500px;
+			}
+		}
+	}
+
+	.projects {
+		.projects-container {
+			.project {
+				align-items: center;
+				flex-direction: column-reverse;
+				gap: 20px;
+
+				.project-text,
+				.project-img {
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.top-section {
+		
+		.bg {
+			object-fit: cover;
+		}
+	}
+
+	.about {
+		.about-content {
+			width: 100%;
+
+			.about-img,
+			.about-text {
+				width: 95%;
+			}
+
+			.about-img::before {
+				width: 90%;
+				height: 80%;
+				top: 15%;
+				left: 10%;
+			}
+		}
+	}
+
+	.projects {
+
+		.project-img,
+		.project-text {
+			width: 90% !important;
+		}
+	}
+
+	.contact {
+		form {
+			.form-group {
+				width: 90%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.top-section .hero-section h1 .braces {
+		font-size: 0.8em;
+	}
+	
+	.about {
+		.about-content {
+			.about-img::before {
+				height: 72%;
+				top: 20%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.about {
+		.about-content {
+			.about-img::before {
+				height: 60%;
+				top: 40%;
+			}
+		}
+	}
+}

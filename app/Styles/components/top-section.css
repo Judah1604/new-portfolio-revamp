@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Space+Grotesk:wght@500&display=swap");
+.top-section {
+  height: 100vh;
+  overflow: hidden;
+}
+.top-section .bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+.top-section .navbar {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.top-section .navbar a {
+  color: #e9e9e9;
+}
+.top-section .navbar .nav {
+  margin-left: auto;
+}
+.top-section .navbar .nav .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  margin: 0 15px;
+}
+.top-section .navbar .nav .nav-item .nav-link:active {
+  color: #FF4747;
+}
+.top-section .navbar .nav .nav-item .nav-link:hover {
+  color: white;
+}
+.top-section .navbar .nav .nav-item:hover > .hover-effect {
+  transform: scaleX(1);
+}
+.top-section .navbar .nav .nav-item .hover-effect {
+  width: 100%;
+  height: 4px;
+  background-color: #FF4747;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.top-section .hero-section {
+  width: 100%;
+  padding: 10px 30px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.top-section .hero-section .text h1 {
+  font-size: 3em;
+}
+.top-section .hero-section .text p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+.top-section .hero-section .text .red {
+  overflow: hidden;
+  color: #FF4747;
+}/*# sourceMappingURL=top-section.css.map */
