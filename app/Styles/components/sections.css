@@ -40,8 +40,6 @@
 }
 .about .about-text .btn {
   margin-top: 20px;
-  margin-left: 10px;
-  width: 250px;
 }
 .about .about-text .btn:hover {
   box-shadow: inset 250px 0px 0px #FF4747;
@@ -61,14 +59,14 @@
   margin-bottom: 2em;
   overflow: hidden;
 }
-.skills .languages i {
-  color: #525252;
-  font-size: 1.7em;
+.skills .languages img {
+  width: 30px;
+  height: 30px;
   transition: 0.3s;
   cursor: pointer;
 }
-.skills .languages i:hover {
-  color: #9d9d9d;
+.skills .languages img:hover {
+  filter: brightness(1.5);
   transform: scale(1.2);
 }
 
@@ -163,7 +161,7 @@
 .contact form .form-group label {
   opacity: 0.7;
   top: 21px;
-  left: 27px;
+  left: 20px;
   position: absolute;
   transition: 0.3s;
 }
@@ -183,6 +181,32 @@
   margin-bottom: 1.5em;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: white;
+  font-size: 1.2em;
+  background-color: #202020;
+  display: flex;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 15px 10px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+  text-decoration: none;
+  transform: scale(0);
+  z-index: 10;
+}
+.back-to-top:hover {
+  filter: brightness(1.3);
+  color: white;
+}
+
+.back-to-top.active {
+  transform: scale(1);
+}
+
 .socials {
   display: flex;
   justify-content: center;
@@ -191,11 +215,12 @@
   gap: 50px;
   text-align: center;
   margin-bottom: 1em;
+  overflow: hidden;
 }
 .socials a {
   color: #e9e9e9;
   font-size: 1.7em;
-  transition: 0.3s;
+  transition: opacity 0.3s;
 }
 .socials a:hover {
   opacity: 0.5;
@@ -216,8 +241,8 @@
   padding: 10px 20px;
   background-color: inherit;
   letter-spacing: 1px;
-  transition: 0.4s ease;
-  display: flex;
+  transition: box-shadow 0.4s ease, border 0.4s ease;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }

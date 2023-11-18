@@ -1,8 +1,12 @@
 import { Space_Grotesk, Tilt_Neon } from "next/font/google";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./Styles/base/common.css";
+import "./Styles/components/sections.css";
 
-const tilt_neon = Tilt_Neon({ subsets: ["latin"], variable: '--font-tilt-neon' });
+const tilt_neon = Tilt_Neon({
+    subsets: ["latin"],
+    variable: "--font-tilt-neon",
+});
 const space_grotesk = Space_Grotesk({
     weight: "600",
     subsets: ["latin"],
@@ -17,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${tilt_neon.variable} ${space_grotesk.variable}`}>{children}</body>
+            <body className={`${tilt_neon.variable} ${space_grotesk.variable}`}>
+                {children}
+            </body>
         </html>
     );
 }

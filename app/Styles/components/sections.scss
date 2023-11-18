@@ -4,7 +4,7 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 
 .about {
 	background-color: $section-color;
-	
+
 	.header {
 		margin: 0;
 	}
@@ -33,8 +33,6 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 			}
 
 			img {
-				width: 100%;
-				height: 100%;
 				object-fit: cover;
 				position: absolute;
 				z-index: 2;
@@ -47,8 +45,6 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 
 		.btn {
 			margin-top: 20px;
-			margin-left: 10px;
-			width: 250px;
 
 			&:hover {
 				box-shadow: inset 250px 0px 0px #FF4747;
@@ -59,27 +55,27 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 
 .skills {
 	overflow: hidden;
-	
+
 	.languages {
 		width: 60%;
 		display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		grid-gap: 20px;
 		place-items: center;
 		padding: 10px;
 		margin: auto;
 		margin-bottom: 2em;
 		overflow: hidden;
 
-		i {
-			color: #525252;
-			font-size: 1.7em;
+		img {
+			width: 30px;
+			height: 30px;
 			transition: 0.3s;
 			cursor: pointer;
-			
+
 
 			&:hover {
-				color: #9d9d9d;
+				filter: brightness(1.5);
 				transform: scale(1.2);
 			}
 		}
@@ -155,7 +151,7 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 				border-bottom: 3px solid $red-color;
 				color: inherit;
 
-				&:focus ~ label {
+				&:focus~label {
 					font-size: 0.7em;
 					color: $red-color;
 					top: 0px;
@@ -182,7 +178,7 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 			label {
 				opacity: 0.7;
 				top: 21px;
-				left: 27px;
+				left: 20px;
 				position: absolute;
 				transition: 0.3s;
 			}
@@ -205,17 +201,46 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 			margin-bottom: 1.5em;
 		}
 	}
+
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	color: white;
+	font-size: 1.2em;
+	background-color: #202020;
+	display: flex;
+	padding: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0px 15px 10px 10px rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+	text-decoration: none;
+	transform: scale(0);
+	z-index: 10;
+
+	&:hover {
+		filter: brightness(1.3);
+		color: white;
+	}
+}
+
+.back-to-top.active {
+	transform: scale(1);
 }
 
 .socials {
 	@include flex (center, center, row, 50px);
 	text-align: center;
 	margin-bottom: 1em;
+	overflow: hidden;
 
 	a {
 		color: #e9e9e9;
 		font-size: 1.7em;
-		transition: 0.3s;
+		transition: opacity 0.3s;
 
 		&:hover {
 			opacity: 0.5;
@@ -239,8 +264,8 @@ $gradient: linear-gradient(45deg, #ff294e, #ff4b2b);
 	padding: 10px 20px;
 	background-color: inherit;
 	letter-spacing: 1px;
-	transition: 0.4s ease;
-	display: flex;
+	transition: box-shadow 0.4s ease, border 0.4s ease;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 

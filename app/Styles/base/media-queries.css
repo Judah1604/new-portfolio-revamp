@@ -31,6 +31,10 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .top-section .hero-section h1 {
+    flex-direction: column;
+    gap: 0 !important;
+  }
   .top-section .bg {
     -o-object-fit: cover;
        object-fit: cover;
@@ -54,6 +58,10 @@
   }
   .contact form .form-group {
     width: 90%;
+  }
+  .back-to-top {
+    bottom: 30px;
+    right: 30px;
   }
 }
 @media screen and (max-width: 375px) {

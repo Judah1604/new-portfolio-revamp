@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
     return (
@@ -11,9 +14,21 @@ const About = () => {
                         animate={{ scale: [0.95, 1, 0.95] }}
                         transition={{ repeat: Infinity, duration: 3 }}
                     ></motion.div>
-                    <img src="Images/profile-pic.png" alt="Profile Picture" />
+                    <img />
+                    <Image
+                        width={100}
+                        height={100}
+                        src="/Images/profile-pic.png"
+                        alt="Profile Picture"
+                        layout="responsive"
+                    />
                 </div>
-                <div className="about-text col-md-6">
+                <motion.div
+                    className="about-text col-md-6"
+                    initial={{ x: 70 }}
+                    whileInView={{ x: 0 }}
+                    viewport={{ once: true }}
+                >
                     Recent high school graduate with a background in web design
                     and development of dynamic, responsive and interactive
                     websites utilizing HTML, CSS, Javascript and their
@@ -25,12 +40,12 @@ const About = () => {
                     <br />
                     <a
                         className="btn red-btn"
-                        href="./Judah-Oyedele.pdf"
+                        href="../../Judah-Oyedele.pdf"
                         download="Judah Oyedele's Resume"
                     >
                         <i class="fa-solid fa-download"></i> Download Resume
                     </a>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

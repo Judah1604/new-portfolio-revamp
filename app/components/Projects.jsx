@@ -1,4 +1,6 @@
-import Project from "./Project"
+"use client";
+
+import Project from "./Project";
 
 const Projects = () => {
     return (
@@ -13,7 +15,7 @@ const Projects = () => {
                     tools={["React", "SASS", "Bootstrap", "NextJs"]}
                     filename="movipix.png"
                     repoName={"movipix"}
-                    url={'movipix.netlify.app'}
+                    url="https://movipix.netlify.app"
                 />
                 <Project
                     heading="Word Count"
@@ -117,6 +119,6 @@ const Projects = () => {
             </div>
         </div>
     );
-}
+};
 
-export default Projects
+export default Projects;

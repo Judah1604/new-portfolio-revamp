@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Space+Grotesk:wght@500&display=swap");
 * {
   overflow-x: hidden;
 }
 
 body {
-  background-color: #020202 !important;
+  background-color: #020202;
   color: #e9e9e9;
-  font-family: var(--font-tilt-neon);
+  font-family: "Tilt Neon", cursive;
 }
 body::-webkit-scrollbar {
   background-color: #020202;
@@ -19,7 +20,7 @@ body::-webkit-scrollbar-thumb {
 h1,
 h2,
 h3 {
-  font-family: var(--font-space-grotesk);
+  font-family: "Space Grotesk", sans-serif;
   overflow: hidden;
 }
 
